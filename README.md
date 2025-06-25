@@ -18,3 +18,7 @@ A next js application for product display. Styled using tailwind CSS.
 -Added the dynammic product pages with product description
 -Added functionality to "Add to cart" buttons using redux and localStorage
 -The cart is stored in localStorage with no repitition of products, the quanity automatically increases
+
+#Added responsiveness
+-The website is responsive for all screens
+-Added loading and error state management

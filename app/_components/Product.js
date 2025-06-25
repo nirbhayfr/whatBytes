@@ -4,13 +4,14 @@ import { updateCart } from "../_store/productSlice";
 
 function Product({ product }) {
      const dispatch = useDispatch();
-     function handleClick() {
+     function handleClick(e) {
           const obj = {
                name: product.title,
                price: product.price,
                quantity: 1,
           };
           dispatch(updateCart(obj));
+          e.target.innerHTML = "Added";
      }
      return (
           <div className="bg-white rounded-xl p-4 space-y-4">
@@ -29,8 +30,8 @@ function Product({ product }) {
                </p>
                <p className="text-xl font-medium">${product.price}</p>
                <button
-                    className="w-full bg-blue-700 text-white px-4 py-2"
-                    onClick={handleClick}
+                    className="w-full bg-blue-700 text-white px-4 py-2 cursor-pointer hover:bg-blue-600 transition-all duration-300"
+                    onClick={(e) => handleClick(e)}
                >
                     Add to cart
                </button>

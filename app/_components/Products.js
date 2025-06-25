@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { setProducts } from "../_store/productSlice";
+import Loader from "../_ui/Loader";
 
 function Products() {
      const searchParams = useSearchParams();
@@ -27,7 +28,7 @@ function Products() {
      let filterData = data;
 
      //Error Handling and data uploading
-     if (isPending) return null;
+     if (isPending) return <Loader />;
      if (error) throw new Error("Failed to fetch data.");
 
      dispatch(setProducts(data));
@@ -63,7 +64,7 @@ function Products() {
      return (
           <div className="grid grid-rows-[auto_auto_4rem] gap-4">
                <h2 className="font-semibold text-2xl">Product Listing</h2>
-               <div className="grid grid-cols-3 gap-4">
+               <div className="grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
                     {displayData.map((product) => (
                          <Product product={product} key={product.id} />
                     ))}

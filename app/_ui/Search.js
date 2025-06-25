@@ -18,7 +18,7 @@ function Search() {
      }
 
      return (
-          <div className="w-1/3 flex items-center border-2 border-white/40 rounded-sm justify-center">
+          <div className="w-1/3 flex items-center border-2 border-white/40 rounded-sm justify-center max-xs:col-span-full max-xs:row-start-2 max-xs:w-full">
                <button
                     className=" border-r-transparent px-4 py-2 cursor-pointer hover:bg-blue-500 transition-all duration-200"
                     onClick={handleClick}

@@ -4,20 +4,20 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 
 function Footer() {
      return (
-          <footer className="bg-blue-900 grid grid-cols-[1fr_1fr_2fr] text-white px-12 py-6">
-               <div className="space-y-4">
+          <footer className="bg-blue-900 grid grid-cols-[1fr_1fr_2fr] text-white px-12 py-6 max-sm:grid-cols-3 max-xs:grid-cols-2 max-xs:gap-4">
+               <div className="space-y-4 max-xs:space-y-1">
                     <h3 className="text-xl font-semibold">Filters</h3>
                     <p>All</p>
-                    <p className="pt-6">&copy;2024 American</p>
+                    <p className="pt-6 max-xs:pt-0">&copy;2024 American</p>
                </div>
 
-               <div className="space-y-4">
+               <div className="space-y-4 max-xs:space-y-1">
                     <h3 className="text-xl font-semibold">About us</h3>
                     <p>About Us</p>
                     <p>Contact</p>
                </div>
 
-               <div className="flex items-center flex-col">
+               <div className="flex items-center flex-col max-xs:items-start">
                     <div className="space-y-4">
                          <h3 className="text-xl font-semibold">Follow Us</h3>
                          <div className="flex items-center gap-x-4">
