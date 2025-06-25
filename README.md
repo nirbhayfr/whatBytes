@@ -22,3 +22,7 @@ A next js application for product display. Styled using tailwind CSS.
 #Added responsiveness
 -The website is responsive for all screens
 -Added loading and error state management
+
+#Added live demo and fixed bugs
+-Live Demo: https://what-bytes-demo.vercel.app
+-Fixed a bug of quantity in localStorage

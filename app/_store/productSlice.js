@@ -23,7 +23,7 @@ const productSlice = createSlice({
                );
 
                if (item !== undefined) {
-                    item.quantity++;
+                    item.quantity = item.quantity + action.payload.quantity;
                } else {
                     state.cart.push(action.payload);
                }
