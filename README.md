@@ -4,7 +4,12 @@ A next js application for product display. Styled using tailwind CSS.
 -Added the header and footer
 -Added search bar logic using useRouter and useSearchParams
 
-#2nd Commit
+#Added filters section
 -Added the Ui for the filters section
 -Added url functionality connected to the filters section
 -Added global state to manage filters using Redux Js and Redux Js Toolkit
+
+#Added products
+-Added the products section UI
+-Added filtering for the products
+-Added search functionality for the products

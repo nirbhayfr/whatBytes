@@ -2,7 +2,7 @@ const { createSlice } = require("@reduxjs/toolkit");
 
 const initialState = {
      category: "all",
-     price: [0, 10000],
+     price: [0, 1000],
 };
 
 const filterSlice = createSlice({

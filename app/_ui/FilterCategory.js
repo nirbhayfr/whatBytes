@@ -50,14 +50,14 @@ function FilterCategory({ filterState }) {
                          <input
                               type="radio"
                               name="category"
-                              id="home"
-                              value="home"
-                              checked={filterState === "home"}
+                              id="jewelery"
+                              value="jewelery"
+                              checked={filterState === "jewelery"}
                               onChange={(e) =>
                                    dispatch(changeCategory(e.target.value))
                               }
                          />
-                         <label htmlFor="home">Home</label>
+                         <label htmlFor="jewelery">Jewelery</label>
                     </li>
                </ul>
           </div>
