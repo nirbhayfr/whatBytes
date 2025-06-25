@@ -2,12 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import Product from "./Product";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { setProducts } from "../_store/productSlice";
 
 function Products() {
      const searchParams = useSearchParams();
+     const dispatch = useDispatch();
      const search = searchParams.get("search");
      const category = searchParams.get("category");
-     const [min, max] = searchParams.get("price").split("-");
+     const price = searchParams.get("price");
 
      const [displayIndex, setDisplayIndex] = useState(6);
      function handleClick() {
@@ -27,6 +30,8 @@ function Products() {
      if (isPending) return null;
      if (error) throw new Error("Failed to fetch data.");
 
+     dispatch(setProducts(data));
+
      //Search
      if (search !== null) {
           let searchData = filterData.map((i) => JSON.stringify(i));
@@ -43,7 +48,13 @@ function Products() {
      }
 
      //Filters
-     filterData = filterData.filter((i) => i.price >= min && i.price <= max);
+     if (price !== null) {
+          filterData = filterData.filter(
+               (i) =>
+                    i.price >= price.split("-")[0] &&
+                    i.price <= price.split("-")[1]
+          );
+     }
      if (category !== "all")
           filterData = filterData.filter((i) => i.category.includes(category));
 

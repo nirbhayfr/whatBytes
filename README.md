@@ -13,3 +13,8 @@ A next js application for product display. Styled using tailwind CSS.
 -Added the products section UI
 -Added filtering for the products
 -Added search functionality for the products
+
+#Added dynamic product pages
+-Added the dynammic product pages with product description
+-Added functionality to "Add to cart" buttons using redux and localStorage
+-The cart is stored in localStorage with no repitition of products, the quanity automatically increases
